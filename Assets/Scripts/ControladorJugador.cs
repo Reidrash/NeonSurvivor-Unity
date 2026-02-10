@@ -5,6 +5,9 @@ public partial class ControladorJugador : MonoBehaviour
     // Propiedad publica que se puede ver desde el editor de Unity. Con esta controlamos la velocidad del jugador
     public float speed = 10.0f;
 
+    public GameObject bulletPrefab; // El molde de la bala
+    public Transform firePoint;     // El lugar desde donde sale
+
     // Metodo que se ejecuta una vez por fotograma. Es decir, si corremos el juego a 60 FPS, se ejecutará 60 veces
     // en un segundo
     void Update()
@@ -26,5 +29,15 @@ public partial class ControladorJugador : MonoBehaviour
         // Movemos el objeto en relación al tiempo (Time.deltaTime) para que sea fluido y consistente en todos los equipos
         // DeltaTime simboliza el tiempo que pasó desde el último frame.
         transform.Translate(movement * speed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+    }
+    void Shoot()
+    {
+        // Crear la bala en la posición y rotación del FirePoint
+        Instantiate(bulletPrefab, firePoint.position, transform.rotation);
     }
 }
