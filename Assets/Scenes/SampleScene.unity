@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 1129367928}
   m_Layer: 6
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,6 +690,54 @@ MonoBehaviour:
   speed: 10
   bulletPrefab: {fileID: 3306243215648535215, guid: 932ec86e9f9f7194c88aea0c6e56e3c3, type: 3}
   firePoint: {fileID: 1576739190}
+--- !u!1 &1474848879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474848881}
+  - component: {fileID: 1474848880}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1474848880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474848879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9896a07d7aa02a4b911ea6dc84a4125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  enemyPrefab: {fileID: 6923434665119169338, guid: c86c6190e109a1947aded64166bc2e60, type: 3}
+  spawnInterval: 2
+  xRange: 5
+  zRange: 5
+--- !u!4 &1474848881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474848879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1576739189
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,3 +778,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 329575524}
   - {fileID: 1129367927}
+  - {fileID: 1474848881}
